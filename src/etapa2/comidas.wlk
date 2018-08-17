@@ -75,8 +75,8 @@ object canelones{
 	 * enviándole mensajes al objeto que representa a los canelones. 
 	 * Se puede hacer agregando 4 métodos, uno por cada una de las cuatro opciones posibles. */
 	 
-	 var tieneQueso
-	 var tieneSalsa
+	 var tieneQueso = false
+	 var tieneSalsa = false
 	
 	method ponerQueso(){
 		tieneQueso = true
@@ -96,11 +96,11 @@ object canelones{
 	
 	method energiaPorGramo(){
 		
-		if (tieneQueso) {
+		if (tieneQueso && not tieneSalsa) {
 			return 27
-		} else if (tieneSalsa){
+		} else if (tieneSalsa && not tieneQueso){
 			return 25
-		} else if (tieneQueso&&tieneSalsa){
+		} else if (tieneQueso and tieneSalsa){
 			return 32
 		}
 		return 20
