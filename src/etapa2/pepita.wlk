@@ -22,7 +22,8 @@ object pepita {
 	}  
 	method estaFeliz() {
 	//si tiene mas de 500 energia y menos que mil esta feli' :)
-		return energia>=500&&energia<=1000
+		//return energia>=500&&energia<=1000 // 
+		return energia.between(500,1000) // se vale usar el between?
 	}  
 	
 	method cuantoQuiereVolar() { 
