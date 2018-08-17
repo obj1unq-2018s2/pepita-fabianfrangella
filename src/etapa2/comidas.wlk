@@ -46,13 +46,13 @@ object mijo{
   * 10 gramos hacen 150 joules. La segunda, el mijo está seco, entonces da 20 joules por gramo; 
   * 10 gramos hacen 200 joules, más 150 que tenía, hacen 350.
   */
-  	var estaMojado = true
+  	var estaMojado
 	method mojarse(){
-		
+		estaMojado = true
 	}
 	
 	method secarse(){
-		estaMojado=false
+		estaMojado = false
 		
 	}
   method energiaPorGramo(){
