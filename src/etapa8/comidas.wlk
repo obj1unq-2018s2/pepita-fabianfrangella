@@ -104,7 +104,7 @@ object canelones {
 		tieneSalsa = false
 	}
 
-	method energiaPorGramo() {	
+	method energiaPorGramo() {
 		if (tieneQueso && !tieneSalsa) {
 			return 27
 		} else if (tieneSalsa && !tieneQueso) {

@@ -1,18 +1,24 @@
 /*
  * Traerse las definiciones de la etapa 4
  */
-// import roque.roque
-// import pepita.pepita
-// import masAves.pepon
-// import masAve.pipa
+import roque.roque
+import pepita.pepita
+import masAves.pepon
+import masAves.pipa
 
 object helicopteroFeo {
   var kmDesdeUltimoService = 0
   const frecuenciaServiceKm = 1000
 
-  method volar(km) { kmDesdeUltimoService += km }
-  method requiereService() { return kmDesdeUltimoService >= frecuenciaServiceKm } 
-  method registarService() { kmDesdeUltimoService = 0 }
+  method volar(km) {
+  	kmDesdeUltimoService += km
+  }
+  method requiereService() { 
+  	return kmDesdeUltimoService >= frecuenciaServiceKm
+  } 
+  method registarService() {
+  	kmDesdeUltimoService = 0
+  }
 }
 
 
@@ -29,6 +35,10 @@ object pepucha {
     }
     cuantoComioDesdeUltimoVuelo = 0
   }
-  method comer(gramos) { cuantoComioDesdeUltimoVuelo += gramos }
-  method esBienTratada() { return kmVoladosConPilas >= kmVoladosSinPilas }
+  method comer(gramos) {
+  	cuantoComioDesdeUltimoVuelo += gramos
+  }
+  method esBienTratada() { 
+  	return kmVoladosConPilas >= kmVoladosSinPilas
+  }
 }

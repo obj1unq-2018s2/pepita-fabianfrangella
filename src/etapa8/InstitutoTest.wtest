@@ -1,0 +1,19 @@
+import roque.*
+import comidas.*
+import masAves.*
+import pepita.*
+import susana.*
+import instituto.*
+
+test "mejores estudiantes" {
+ roque.agregarPupilo(pipa)
+ susana.tuPupiloEs(pepon)
+ instituto.contratar(roque)
+ instituto.contratar(susana)
+ instituto.entrenamientoGeneral()
+ instituto.mejoresEstudiantes()
+ 
+ assert.equals([pepon,pipa],instituto.mejoresEstudiantes())
+	
+
+}
