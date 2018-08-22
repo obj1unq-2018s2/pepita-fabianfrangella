@@ -49,14 +49,14 @@ object marDelPlata {
 	var temporadaAlta = false
 
 	method energiaPorVisita(ave) {
-		if (temporadaAlta) {
+		if (estacion.esTemporadaAlta()) {
 			return -20
 		} else {
 			return 80
 		}
 	}
 
-// quien chequea si es temporada alta o baja?
+// quien chequea si es temporada alta o baja? el objeto estacion
 }
 
 object noroeste {
@@ -78,5 +78,19 @@ object noroeste {
 // si solo pepita visita el noroeste, no hace falta cambiar el resto de los mensajes
 // si queremos que todas las aves puedan visitarlo, hay que cambiar el method energiaPorVisita
 // en todos los lugares, para que tome como parametro el ave que visita el lugar (self)
+}
+
+object estacion {
+
+	var temporada = true
+
+	method cambiarTemporada() {
+		temporada = !temporada
+	}
+
+	method esTemporadaAlta() {
+		return temporada
+	}
+
 }
 
