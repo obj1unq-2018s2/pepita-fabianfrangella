@@ -46,9 +46,11 @@ object instituto {
 	}
 
 	method mejoresEstudiantes() {
-		entrenadores.forEach{ entrenador => estudiantes = estudiantes + [ entrenador.mejorEstudiante() ]}
-			// por alguna razon me duplica los estudiantes por entrenador, preguntar al profe
-		return estudiantes.withoutDuplicates()
+		entrenadores.forEach{ 
+			entrenador => estudiantes = estudiantes + [ entrenador.mejorEstudiante() ]
+		}
+			
+		return estudiantes
 	}
 
 }
