@@ -46,10 +46,8 @@ object marDelPlata {
 	 * La energía revitalizadora que aporta depende de si se trata de temporada alta o baja.
 	 * En temporada baja aporta 80 joules, mientras que en alta resta 20 joules. 
 	 **TIP**: se puede pensar que en temporada alta la energía que aporta es -20. */
-	var temporadaAlta = false
-
 	method energiaPorVisita(ave) {
-		if (estacion.esTemporadaAlta()) {
+		if (temporada.esTemporadaAlta()) {
 			return -20
 		} else {
 			return 80
@@ -80,17 +78,9 @@ object noroeste {
 // en todos los lugares, para que tome como parametro el ave que visita el lugar (self)
 }
 
-object estacion {
+object temporada {
 
-	var temporada = true
-
-	method cambiarTemporada() {
-		temporada = !temporada
-	}
-
-	method esTemporadaAlta() {
-		return temporada
-	}
-
+	var property esTemporadaAlta = true
+	
 }
 
