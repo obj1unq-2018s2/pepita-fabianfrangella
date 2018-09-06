@@ -104,6 +104,7 @@ object canelones {
 		tieneSalsa = false
 	}
 
+	// TODO Sería mejor que las cuentas las haga el programa y no vos.
 	method energiaPorGramo() {
 		if (tieneQueso && not tieneSalsa) {
 			return 27

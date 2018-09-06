@@ -33,11 +33,13 @@ object roque {
 		if (pupilos.contains(ave)) {
 			console.println("roque ya tiene como pupilo a: " + ave.toString())
 		} else {
+			// TODO No es necesario generar una nueva colección, las colecciones son mutables en Wollok
 			pupilos = pupilos + [ ave ]
 		}
 	}
 
 	method dejarPupilo(ave) {
+		// TODO ¿Es necesario este if? ¿Por qué?
 		if (pupilos.contains(ave)) {
 			pupilos.remove(ave)
 		}
@@ -47,6 +49,7 @@ object roque {
 	method pupilosCapacesDeVolar(unosKms) {
 		pupilos.forEach{ pupilo =>
 			if (pupilo.puedeVolar(unosKms)) {
+				// TODO OJO! Es incorrecto usar la variable capaces de esta manera.
 				capaces = capaces + [ pupilo ]
 			}
 		}
@@ -55,6 +58,8 @@ object roque {
 
 	method estaContento() {
 		if (pupilos.size().between(1, 8)) {
+			// TODO MUCHO OJO!!! Estás usando un atributo incorrectamente, nadie usa la variable contento fuera de este método.
+			// De hecho no es necesario tener una variable, es incorrecto. 
 			contento = true
 		}
 		return contento
